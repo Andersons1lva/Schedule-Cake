@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Schedule Cake</string>
+    <string name="logo_principal">Logo Principal</string>
+    <string name="e_mail">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="botao_entrar">Entrar</string>
+    <string name="nt_conta">Não tem conta? Cadastre-se</string>
+    <string name="ou">Ou</string>
+</resources>
