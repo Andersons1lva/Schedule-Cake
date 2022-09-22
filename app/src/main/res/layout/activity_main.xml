@@ -6,6 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+
     <!--Barra de edição inferior-->
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -30,7 +38,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
+        app:backgroundTint="@color/purple_500"
         app:layout_anchor="@id/bottomAppBar"
-        />
+        android:contentDescription="@string/button_floatingAction" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
