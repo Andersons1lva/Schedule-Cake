@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/textMenuHome"
+        android:title="@string/text_menu_home"
+        android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/textMenuPerson"
+        android:title="@string/text_menu_person"
+        android:icon="@drawable/ic_person"/>
+
+    <item android:id="@+id/placeHolder"
+        android:title=""/>
+
+    <item android:id="@+id/textMenuCake"
+        android:title="@string/text_menu_cake"
+        android:icon="@drawable/ic_cake"/>
+    <item android:id="@+id/textMenuSettings"
+        android:title="@string/text_menu_settings"
+        android:icon="@drawable/ic_settings"/>
+</menu>

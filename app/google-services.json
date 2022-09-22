@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "956338579799",
+    "project_id": "schedule-cake",
+    "storage_bucket": "schedule-cake.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956338579799:android:3534300cd41edd5058f612",
+        "android_client_info": {
+          "package_name": "com.anderson.cakeschedule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956338579799-3nji3b0jmebgop8mhl67ikbt5u269qau.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anderson.cakeschedule",
+            "certificate_hash": "cc0c9a68c440f770f8c8d32dbbcb82e16586f68c"
+          }
+        },
+        {
+          "client_id": "956338579799-0d69ni6jqiqp69sg4lgbf4ajnj3mm0tf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIpv_QOkL0JkdFjDDkwOTvXlSCo2uYCKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956338579799-0d69ni6jqiqp69sg4lgbf4ajnj3mm0tf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
