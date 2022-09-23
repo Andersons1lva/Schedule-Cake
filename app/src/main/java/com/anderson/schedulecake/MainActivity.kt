@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.background = null
         binding.bottomNavigationView.menu.getItem(2).isEnabled = false
 
-
     }
 
 

@@ -1,4 +1,7 @@
 <resources>
+    <string name="text_criar_conta">Criar conta</string>
+    <string name="text_recuperar_conta_login">Recuperar conta</string>
+
     <string name="app_name">Schedule Cake</string>
     <string name="logo_principal">Logo Principal</string>
     <string name="e_mail">E-mail</string>
