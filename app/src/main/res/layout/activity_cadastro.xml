@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationActivity">
+    tools:context=".auth.RegistrationActivity">
 
     <ImageView
         android:id="@+id/iv_logo_registration"
@@ -23,25 +23,6 @@
         app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/cadastro" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_nome_registration"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="@string/name_registration"
-        app:startIconDrawable="@drawable/ic_person"
-        app:layout_constraintEnd_toEndOf="@+id/iv_logo_registration"
-        app:layout_constraintStart_toStartOf="@+id/iv_logo_registration"
-        app:layout_constraintTop_toBottomOf="@+id/iv_logo_registration">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_email_registration"
@@ -49,15 +30,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/email_registration"
-        app:startIconDrawable="@drawable/ic_email"
-        app:layout_constraintEnd_toEndOf="@+id/til_nome_registration"
-        app:layout_constraintStart_toStartOf="@+id/til_nome_registration"
-        app:layout_constraintTop_toBottomOf="@+id/til_nome_registration">
+        app:layout_constraintEnd_toEndOf="@+id/iv_logo_registration"
+        app:layout_constraintStart_toStartOf="@+id/iv_logo_registration"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo_registration"
+        app:startIconDrawable="@drawable/ic_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailCadastro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textEmailAddress" />
@@ -81,6 +63,7 @@
         app:layout_constraintTop_toBottomOf="@id/til_email_registration">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPasswordCadastro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword" />
