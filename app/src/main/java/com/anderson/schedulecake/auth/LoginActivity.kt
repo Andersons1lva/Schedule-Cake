@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
     private fun validaData(){
         //Campos a serem verificados
         val email = binding.editEmailLogin.text.toString().trim()
-        val password = binding.editPasswordLogin.toString().trim()
+        val password = binding.editPasswordLogin.text.toString().trim()
         //verificação dos campos
         if (email.isNotEmpty()){
             if (password.isNotEmpty()){
@@ -60,10 +60,10 @@ class LoginActivity : AppCompatActivity() {
     }
     //Salvando os Dados do Login no Firebase
     private fun loginUser(email: String, password: String){
-        //Criação do email e senha no firebase
+        //executa o login do email e senha no firebase
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener (this){task ->
-                if (task.isSuccessful){
+            .addOnCompleteListener(this){login ->
+                if (login.isSuccessful){
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
                 }else{
