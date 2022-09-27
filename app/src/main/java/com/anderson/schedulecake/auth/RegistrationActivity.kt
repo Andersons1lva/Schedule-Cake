@@ -52,7 +52,8 @@ class RegistrationActivity : AppCompatActivity() {
     }
     //Salvando os Dados do Cadastro no Firebase
     private fun registerUser(email: String, password: String){
-        auth.signInWithEmailAndPassword(email, password)
+        // Criação do email e senha no Firebase
+        auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){task ->
                 if (task.isSuccessful){
                     val intent = Intent(this@RegistrationActivity, MainActivity::class.java)
