@@ -14,6 +14,7 @@ class RegistrationActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityCadastroBinding
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCadastroBinding.inflate(layoutInflater)
@@ -54,8 +55,10 @@ class RegistrationActivity : AppCompatActivity() {
     private fun registerUser(email: String, password: String){
         // Criação do email e senha no Firebase
         auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this){task ->
-                if (task.isSuccessful){
+            .addOnCompleteListener(this){cadastro ->
+                //condição para verificar se o cadatro ocorreu com sucesso no Firebase
+                if (cadastro.isSuccessful){
+                    // após cadastro efetuado com sucesso direciona para MainActivity
                     val intent = Intent(this@RegistrationActivity, MainActivity::class.java)
                     startActivity(intent)
                 }else{

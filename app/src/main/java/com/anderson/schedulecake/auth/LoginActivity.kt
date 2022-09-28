@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.anderson.schedulecake.MainActivity
 import com.anderson.schedulecake.databinding.ActivityLoginBinding
-import com.anderson.schedulecake.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
