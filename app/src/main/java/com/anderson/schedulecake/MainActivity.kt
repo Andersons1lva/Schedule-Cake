@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
         fragmentCalendar = CalendarFragment ()
         fragmentHome = HomeFragment ()
 
+        //carregamento do fragmento na activityMain
         supportFragmentManager.beginTransaction().add(R.id.frameLayoutFragment, fragmentHome)
             .commit()
-
         transaction = supportFragmentManager.beginTransaction()
 
 
