@@ -1,14 +1,17 @@
 package com.anderson.schedulecake.auth
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.anderson.schedulecake.MainActivity
+import com.anderson.schedulecake.R
 import com.anderson.schedulecake.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -32,11 +35,18 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener { validaData() }
 
         binding.textCriarConta.setOnClickListener {
-            //captura o envento de click, fazendo a navegação entre os fragment (Login com register)
-            val intent = Intent(this@LoginActivity,RegistrationActivity::class.java)
-            startActivity(intent)
+            //captura o envento de click, fazendo a navegação entre as activitys (Login com register)
+            val createAccount = Intent(this@LoginActivity,RegistrationActivity::class.java)
+            startActivity(createAccount)
+        }
+
+        binding.textRecuperarConta.setOnClickListener {
+            //captura o envento de click, fazendo a navegação entre as activitys (Login com register)
+            val recoveryAccount = Intent(this@LoginActivity,RecoveryAccountActivity::class.java)
+            startActivity(recoveryAccount)
         }
     }
+
 
     //Função que confere se os campos está preenchidos
     private fun validaData(){
