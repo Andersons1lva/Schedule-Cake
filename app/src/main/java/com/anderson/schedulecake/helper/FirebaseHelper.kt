@@ -20,7 +20,7 @@ class FirebaseHelper {
         fun isAutnticated() = getAuth().currentUser != null
 
         //pegar os erros que vem do firebase em ingles e jogar em português
-       /* fun validError(error: String): Int {
+       fun validError(error: String): Int {
             return when {
                 //error quando não e um email cadastrado
                 error.contains("There is no user record corresponding to this identifier") -> {
@@ -48,6 +48,6 @@ class FirebaseHelper {
                     R.string.error_generic
                 }
             }
-        }*/
+        }
     }
 }

@@ -1,4 +1,5 @@
 <resources>
+    <string name="error_generic">Ocorreu um erro, por favor tente novamente mais tarde.</string>
     <string name="text_criar_conta">Criar conta</string>
     <string name="text_recuperar_conta_login">Recuperar conta</string>
 
@@ -14,7 +15,7 @@
     <string name="button_registration">Cadastrar</string>
 
     <string name="button_recovery_account">Enviar</string>
-    <string name="email_recovery_account">Email@exemplo.com.br</string>
+    <string name="email_recovery_account">E-mail</string>
     <string name="text_toolbar_recover_account">Recuperar Conta</string>
 
     <string name="button_floatingAction">Botão Adicionar</string>
@@ -24,16 +25,26 @@
     <string name="text_menu_person">Cliente</string>
     <string name="text_menu_cake">Encomenda</string>
     <string name="text_menu_settings">Configurações</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_recovery_account">RecoveryAccountActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- Erros Firebase Authentication -->
+    <string name="account_not_registered_register_fragment">Não há registro de usuário correspondente a este identificador. O usuário pode ter sido excluído</string>
+    <string name="invalid_email_registrar_fragment">Insira um e-mail válido</string>
+    <string name="invalid_password_register_fragment">A senha é inválida ou o usuário não possui uma senha</string>
+    <string name="email_in_use_register_fragment">O endereço de e-mail já está sendo usado por outra conta</string>
+    <string name="strong_password_register_fragment">A senha fornecida é inválida. [ A senha deve ter pelo menos 6 caracteres ]</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 </resources>

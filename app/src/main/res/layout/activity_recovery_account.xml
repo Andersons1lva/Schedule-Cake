@@ -6,39 +6,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".auth.RecoveryAccountActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/btnback"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBarLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                app:navigationIcon="@drawable/ic_back">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/text_toolbar_recover_account"
-                    android:textColor="@color/text_recovery_account" />
-
-            </androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.AppBarLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Botão voltar"
+        app:tint="@color/purple_500" />
 
     <TextView
         android:id="@+id/textRedefinirSenha"
@@ -47,13 +26,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
         android:text="Redefinir Senha"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/btnback" />
 
     <TextView
         android:id="@+id/textDescripition"
@@ -62,6 +42,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
         android:text="Digite o e-mail associado à sua conta e enviaremos um e-mail com instruções para redefinir sua senha."
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textRedefinirSenha"
