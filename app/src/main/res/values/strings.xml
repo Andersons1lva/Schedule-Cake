@@ -23,7 +23,7 @@
     <!--Menu-->
     <string name="text_menu_home">Home</string>
     <string name="text_menu_person">Cliente</string>
-    <string name="text_menu_cake">Encomenda</string>
+    <string name="text_menu_exit">Sair</string>
     <string name="text_menu_settings">Configurações</string>
 
     <!-- Erros Firebase Authentication -->

@@ -27,11 +27,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //chamada do menu inferior
         binding.bottomNavigationView.background = null
         binding.bottomNavigationView.menu.getItem(2).isEnabled = false
 
-        fragmentCalendar = CalendarFragment ()
-        fragmentHome = HomeFragment ()
+        fragmentCalendar = CalendarFragment()
+        fragmentHome = HomeFragment()
 
         //carregamento do fragmento na activityMain
         supportFragmentManager.beginTransaction().add(R.id.frameLayoutFragment, fragmentHome)
@@ -39,15 +40,25 @@ class MainActivity : AppCompatActivity() {
         transaction = supportFragmentManager.beginTransaction()
 
 
-        //logoutApp()
+        clicksMenu()
+
+        initClicks()
     }
 
-   /* private fun logoutApp(){
-        //auth.singOut() desloga usuario do app
-        auth.signOut()
-        //após sair do app volta para tela de login
-        val logout = Intent(this@MainActivity,LoginActivity::class.java)
-        startActivity(logout)
+    //função de clicks geral
+    private fun initClicks() {
 
-    }*/
+    }
+
+    private fun clicksMenu(){
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.btnMenuExit -> {
+                    auth.signOut()
+                }
+            }
+            true
+        }
+    }
+
 }
