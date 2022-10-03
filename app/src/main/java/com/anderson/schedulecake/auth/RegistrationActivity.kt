@@ -59,7 +59,7 @@ class RegistrationActivity : AppCompatActivity() {
                 //condição para verificar se o cadatro ocorreu com sucesso no Firebase
                 if (cadastro.isSuccessful){
                     // após cadastro efetuado com sucesso direciona para MainActivity
-                    val intent = Intent(this@RegistrationActivity, MainActivity::class.java)
+                    val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
                     startActivity(intent)
                 }else{
                     Toast.makeText(applicationContext, "Erro ao Cadastrar", Toast.LENGTH_SHORT).show()

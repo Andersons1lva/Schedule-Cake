@@ -5,12 +5,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.fragment.findNavController
 import com.anderson.schedulecake.auth.LoginActivity
 import com.anderson.schedulecake.databinding.ActivityMainBinding
 import com.anderson.schedulecake.fragment.CalendarFragment
 import com.anderson.schedulecake.fragment.HomeFragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +40,8 @@ class MainActivity : AppCompatActivity() {
             .commit()
         transaction = supportFragmentManager.beginTransaction()
 
+        // Initialize Firebase Auth
+        auth = Firebase.auth
 
         clicksMenu()
 
@@ -51,14 +54,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clicksMenu(){
-        binding.bottomNavigationView.setOnItemSelectedListener { item ->
+        binding.bottomNavigationView.setOnItemSelectedListener {item ->
             when (item.itemId) {
                 R.id.btnMenuExit -> {
-                    auth.signOut()
+                    logoutApp()
                 }
             }
             true
         }
+    }
+
+    private fun logoutApp(){
+        //auth.singOut() desloga usuario do app
+        auth.signOut()
+        //após sair do app volta para tela de login
+        val logout = Intent(this@MainActivity,LoginActivity::class.java)
+        startActivity(logout)
+
     }
 
 }
