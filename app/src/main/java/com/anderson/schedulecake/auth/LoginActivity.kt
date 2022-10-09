@@ -16,7 +16,7 @@ import com.google.firebase.ktx.Firebase
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var binding:ActivityLoginBinding
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,55 +30,67 @@ class LoginActivity : AppCompatActivity() {
     }
 
     //Função para ouvir os enventos de clicks
-   private fun initClicks() {
+    private fun initClicks() {
         //botão de Login recebendo o metodo de validação
         binding.btnLogin.setOnClickListener { validaData() }
 
         binding.textCriarConta.setOnClickListener {
             //captura o envento de click, fazendo a navegação entre as activitys (Login com register)
-            val createAccount = Intent(this@LoginActivity,RegistrationActivity::class.java)
+            val createAccount = Intent(this@LoginActivity, RegistrationActivity::class.java)
             startActivity(createAccount)
         }
 
         binding.textRecuperarConta.setOnClickListener {
             //captura o envento de click, fazendo a navegação entre as activitys (Login com register)
-            val recoveryAccount = Intent(this@LoginActivity,RecoveryAccountActivity::class.java)
+            val recoveryAccount = Intent(this@LoginActivity, RecoveryAccountActivity::class.java)
             startActivity(recoveryAccount)
         }
     }
 
 
     //Função que confere se os campos está preenchidos
-    private fun validaData(){
+    private fun validaData() {
         //Campos a serem verificados
         val email = binding.editEmailLogin.text.toString().trim()
         val password = binding.editPasswordLogin.text.toString().trim()
         //verificação dos campos
-        if (email.isNotEmpty()){
-            if (password.isNotEmpty()){
+        if (email.isNotEmpty()) {
+            if (password.isNotEmpty()) {
 
-               loginUser(email,password)
+                loginUser(email, password)
 
-            }else{
+            } else {
                 Toast.makeText(applicationContext, "Digite a E-mail", Toast.LENGTH_SHORT).show()
             }
-        }else{
+        } else {
             Toast.makeText(applicationContext, "Digite o Senha", Toast.LENGTH_SHORT).show()
         }
 
     }
+
     //Salvando os Dados do Login no Firebase
-    private fun loginUser(email: String, password: String){
+    private fun loginUser(email: String, password: String) {
         //executa o login do email e senha no firebase
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this){login ->
-                if (login.isSuccessful){
+            .addOnCompleteListener(this) { login ->
+                if (login.isSuccessful) {
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
-                }else{
-                    Toast.makeText(applicationContext, "Erro ao ao Logar", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(applicationContext, "Erro ao ao Logar", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
+    }
+
+    //Verificação se o usuario está logado
+    override fun onStart() {
+        super.onStart()
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

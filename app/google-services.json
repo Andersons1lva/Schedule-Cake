@@ -7,18 +7,18 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:956338579799:android:3534300cd41edd5058f612",
+        "mobilesdk_app_id": "1:956338579799:android:2bdb30b9c72ee19f58f612",
         "android_client_info": {
-          "package_name": "com.anderson.cakeschedule"
+          "package_name": "com.anderson.schedulecake"
         }
       },
       "oauth_client": [
         {
-          "client_id": "956338579799-3nji3b0jmebgop8mhl67ikbt5u269qau.apps.googleusercontent.com",
+          "client_id": "956338579799-o29f8pp9ukt3fadnqqaunr1nt92ljoiv.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.anderson.cakeschedule",
-            "certificate_hash": "cc0c9a68c440f770f8c8d32dbbcb82e16586f68c"
+            "package_name": "com.anderson.schedulecake",
+            "certificate_hash": "50b8651162714e5b2adfabe9b7b24a97273ff52d"
           }
         },
         {

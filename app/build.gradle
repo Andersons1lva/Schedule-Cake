@@ -9,7 +9,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.anderson.cakeschedule"
+        applicationId "com.anderson.schedulecake"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -49,6 +49,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation 'com.google.gms:google-services:4.3.14'
     implementation 'androidx.preference:preference:1.2.0'
 
 

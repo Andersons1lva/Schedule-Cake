@@ -13,16 +13,16 @@ import com.google.firebase.ktx.Firebase
 class RecoveryAccountActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRecoveryAccountBinding
-    private lateinit var auth: FirebaseAuth
+    private var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRecoveryAccountBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         // Initialize Firebase Auth
-        auth = Firebase.auth
+        //auth = Firebase.auth
+        mAuth = FirebaseAuth.getInstance()
 
         initClicks()
     }
@@ -57,8 +57,8 @@ class RecoveryAccountActivity : AppCompatActivity() {
     //função responsavel por recuperar a conta
     private fun recoverAccountUser(email: String) {
         //auth.sendPasswordResetEmail quando chamado enviar um email para reset da senha ao email informado
-        Firebase.auth.sendPasswordResetEmail(email)
-            .addOnCompleteListener(this) { task ->
+        mAuth!!.sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(
                         applicationContext,

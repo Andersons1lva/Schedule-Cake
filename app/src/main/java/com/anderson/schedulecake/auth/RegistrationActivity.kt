@@ -51,6 +51,8 @@ class RegistrationActivity : AppCompatActivity() {
             }
 
     }
+
+
     //Salvando os Dados do Cadastro no Firebase
     private fun registerUser(email: String, password: String){
         // Criação do email e senha no Firebase
