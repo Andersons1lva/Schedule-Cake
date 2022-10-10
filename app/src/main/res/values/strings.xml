@@ -32,19 +32,18 @@
     <string name="invalid_password_register_fragment">A senha é inválida ou o usuário não possui uma senha</string>
     <string name="email_in_use_register_fragment">O endereço de e-mail já está sendo usado por outra conta</string>
     <string name="strong_password_register_fragment">A senha fornecida é inválida. [ A senha deve ter pelo menos 6 caracteres ]</string>
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
 
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- Encomendas -->
+    <string name="text_client_fragment_order">Cliente</string>
+    <string name="text_cake_fragment_order">Bolo</string>
+    <string name="text_pasta_fragment_order">Massa</string>
+    <string name="text_filling_fragment_order">Recheio</string>
+    <string name="text_calendar_fragment_order">Agenda</string>
+    <string name="text_value_fragment_order">Valor</string>
+    <string name="text_signal_fragment_order">Sinal</string>
+    <string name="btn_order_to_schedule">Agendar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

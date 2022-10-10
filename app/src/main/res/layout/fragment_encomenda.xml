@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.EncomendaFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="Encomendas"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputClientOrder"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/text_client_fragment_order"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editClientOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputCakeOrder"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/text_cake_fragment_order"
+        app:layout_constraintEnd_toEndOf="@+id/textInputClientOrder"
+        app:layout_constraintStart_toStartOf="@+id/textInputClientOrder"
+        app:layout_constraintTop_toBottomOf="@+id/textInputClientOrder"
+        app:startIconDrawable="@drawable/ic_cake">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCakeOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPastaOrder"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/text_pasta_fragment_order"
+        app:layout_constraintEnd_toEndOf="@+id/textInputCakeOrder"
+        app:layout_constraintStart_toStartOf="@+id/textInputCakeOrder"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCakeOrder"
+        app:startIconDrawable="@drawable/ic_pasta">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPastaOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputFillingOrder"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/text_filling_fragment_order"
+        app:layout_constraintEnd_toEndOf="@+id/textInputPastaOrder"
+        app:layout_constraintStart_toStartOf="@+id/textInputPastaOrder"
+        app:layout_constraintTop_toBottomOf="@+id/textInputPastaOrder"
+        app:startIconDrawable="@drawable/ic_filling">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editFillingOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputCalendarOrder"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/text_calendar_fragment_order"
+        app:layout_constraintEnd_toEndOf="@+id/textInputFillingOrder"
+        app:layout_constraintStart_toStartOf="@+id/textInputFillingOrder"
+        app:layout_constraintTop_toBottomOf="@+id/textInputFillingOrder">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCalendarOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputValueOrder"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/text_value_fragment_order"
+        app:layout_constraintEnd_toEndOf="@+id/textInputCalendarOrder"
+        app:layout_constraintStart_toStartOf="@+id/textInputCalendarOrder"
+        app:layout_constraintTop_toBottomOf="@+id/textInputCalendarOrder"
+        app:startIconDrawable="@drawable/ic_value">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editValueOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputSignalOrder"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/text_signal_fragment_order"
+        app:layout_constraintEnd_toEndOf="@+id/textInputValueOrder"
+        app:layout_constraintStart_toStartOf="@+id/textInputValueOrder"
+        app:layout_constraintTop_toBottomOf="@+id/textInputValueOrder"
+        app:startIconDrawable="@drawable/ic_signal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editSignalOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="5dp"
+        android:text="@string/btn_order_to_schedule"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputSignalOrder"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
