@@ -39,7 +39,7 @@
     <string name="text_cake_fragment_order">Bolo</string>
     <string name="text_pasta_fragment_order">Massa</string>
     <string name="text_filling_fragment_order">Recheio</string>
-    <string name="text_calendar_fragment_order">Agenda</string>
+    <string name="text_calendar_fragment_order">Data</string>
     <string name="text_value_fragment_order">Valor</string>
     <string name="text_signal_fragment_order">Sinal</string>
     <string name="btn_order_to_schedule">Agendar</string>

@@ -34,10 +34,9 @@ android {
     buildFeatures {
         viewBinding true
     }
-    buildFeatures{
-        dataBinding true
-    }
+    
     namespace 'com.anderson.schedulecake'
+
 }
 
 dependencies {

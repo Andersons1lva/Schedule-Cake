@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.anderson.schedulecake.auth.LoginActivity
-import com.anderson.schedulecake.databinding.ActivityMainBinding
 import com.anderson.schedulecake.fragment.CalendarFragment
+import com.anderson.schedulecake.databinding.ActivityMainBinding
 import com.anderson.schedulecake.fragment.HomeFragment
-import com.google.android.material.snackbar.Snackbar
+import com.anderson.schedulecake.model.EncomendaActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -56,9 +56,8 @@ class MainActivity : AppCompatActivity() {
     private fun initClicks() {
         val fab: View = binding.bntFab
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .show()
+            val intent = Intent(this@MainActivity, EncomendaActivity::class.java)
+            startActivity(intent)
         }
 
     }
