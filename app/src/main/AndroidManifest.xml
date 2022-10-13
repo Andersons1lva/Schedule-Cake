@@ -17,6 +17,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ClienteActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".model.EncomendaActivity"
             android:exported="false">
             <meta-data
@@ -25,7 +32,7 @@
         </activity>
         <activity
             android:name=".auth.RecoveryAccountActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".auth.RegistrationActivity"
             android:exported="false" />
@@ -40,7 +47,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
