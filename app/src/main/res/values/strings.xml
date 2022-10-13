@@ -43,7 +43,6 @@
     <string name="text_value_fragment_order">Valor</string>
     <string name="text_signal_fragment_order">Sinal</string>
     <string name="btn_order_to_schedule">Agendar</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_title_activity_order">Encomendas</string>
 
 </resources>
