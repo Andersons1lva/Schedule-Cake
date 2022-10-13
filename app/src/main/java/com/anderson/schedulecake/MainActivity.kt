@@ -10,6 +10,7 @@ import com.anderson.schedulecake.auth.LoginActivity
 import com.anderson.schedulecake.fragment.CalendarFragment
 import com.anderson.schedulecake.databinding.ActivityMainBinding
 import com.anderson.schedulecake.fragment.HomeFragment
+import com.anderson.schedulecake.model.ClienteActivity
 import com.anderson.schedulecake.model.EncomendaActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -51,7 +52,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     //função de clicks geral
     private fun initClicks() {
         val fab: View = binding.bntFab
@@ -62,22 +62,33 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun clicksMenu(){
-        binding.bottomNavigationView.setOnItemSelectedListener {item ->
+    private fun clicksMenu() {
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
+                R.id.btnMenuHome -> {
+                    val home = Intent(this@MainActivity, MainActivity::class.java)
+                    startActivity(home)
+                }
+
+                R.id.btnMenuPerson -> {
+                    val person = Intent(this@MainActivity, ClienteActivity::class.java)
+                    startActivity(person)
+                }
+
                 R.id.btnMenuExit -> {
                     logoutApp()
                 }
+
             }
             true
         }
     }
 
-    private fun logoutApp(){
+    private fun logoutApp() {
         //auth.singOut() desloga usuario do app
         auth.signOut()
         //após sair do app volta para tela de login
-        val logout = Intent(this@MainActivity,LoginActivity::class.java)
+        val logout = Intent(this@MainActivity, LoginActivity::class.java)
         startActivity(logout)
 
     }

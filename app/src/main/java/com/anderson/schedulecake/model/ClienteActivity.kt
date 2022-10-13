@@ -2,6 +2,7 @@ package com.anderson.schedulecake.model
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.anderson.schedulecake.R
 
 class ClienteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
