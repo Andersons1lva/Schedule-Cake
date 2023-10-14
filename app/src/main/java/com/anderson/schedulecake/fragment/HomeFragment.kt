@@ -1,13 +1,12 @@
 package com.anderson.schedulecake.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.anderson.schedulecake.R
-import com.anderson.schedulecake.databinding.FragmentCalendarBinding
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.anderson.schedulecake.adapter.Adapter
 import com.anderson.schedulecake.databinding.FragmentHomeBinding
 
 
@@ -30,9 +29,21 @@ class HomeFragment : Fragment() {
 
         val calendarView = binding.calendarView
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
-            Toast.makeText(context, "List", Toast.LENGTH_SHORT).show()
+            initRecyclerView()
         }
+
     }
+
+    private fun initRecyclerView(){
+        // O RequireContext e por que estamos em um fragment se não seria apenas this.
+        binding.rvEncomendas.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvEncomendas.setHasFixedSize(true)
+        binding.rvEncomendas.adapter = Adapter(listEcomenda())
+    }
+
+    private fun  listEcomenda() = listOf(
+        "Anderson", "Joyce", "Bryan", " Aline", "Hanry", "Marinês","Anderson", "Joyce", "Bryan", " Aline", "Hanry", "Marinês"
+    )
 
     override fun onDestroy() {
         super.onDestroy()
