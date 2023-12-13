@@ -10,6 +10,7 @@ import com.anderson.schedulecake.auth.LoginActivity
 import com.anderson.schedulecake.fragment.CalendarFragment
 import com.anderson.schedulecake.databinding.ActivityMainBinding
 import com.anderson.schedulecake.fragment.HomeFragment
+import com.anderson.schedulecake.helper.SharedPreferencesHelper
 import com.anderson.schedulecake.model.ClienteActivity
 import com.anderson.schedulecake.model.EncomendaActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -23,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var transaction: FragmentTransaction
     private lateinit var fragmentCalendar: Fragment
     private lateinit var fragmentHome: Fragment
-    private lateinit var auth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,8 +43,6 @@ class MainActivity : AppCompatActivity() {
             .commit()
         transaction = supportFragmentManager.beginTransaction()
 
-        // Initialize Firebase Auth
-        auth = Firebase.auth
 
         clicksMenu()
 
@@ -86,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun logoutApp() {
         //auth.singOut() desloga usuario do app
-        auth.signOut()
+        SharedPreferencesHelper.clearAuthToken(this)
         //após sair do app volta para tela de login
         val logout = Intent(this@MainActivity, LoginActivity::class.java)
         startActivity(logout)
